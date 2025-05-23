@@ -1,0 +1,6 @@
+{
+    "javascript.suggest.enabled": false,
+    "python.autoComplete.extraPaths": [
+        
+    ]
+}

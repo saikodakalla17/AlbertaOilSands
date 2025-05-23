@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Indigenous Voices: Alberta Oil Sands Awareness</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+ <header>
+   <h1>Indigenous Voices: Protect the Land</h1>
+   <p class="intro">Raising awareness about the impacts of Alberta's oil sands on Indigenous Peoples</p>
+ </header>
+
+
+ <nav>
+   <ul>
+     <li><a href="#intro">Intro</a></li>
+     <li><a href="#impacts">Impacts</a></li>
+     <li><a href="#voices">Voices</a></li>
+     <li><a href="#acfn">ACFN</a></li>
+     <li><a href="#melina">Melina</a></li>
+     <li><a href="#treaty">Treaty Rights</a></li>
+     <li><a href="#action">Action</a></li>
+   </ul>
+ </nav>
+
+
+ <main>
+   <section id="intro">
+     <h2>What Are the Oil Sands?</h2>
+     <p>The Alberta oil sands are one of the largest industrial projects on Earth. But their expansion comes at a great cost to the environment and to Indigenous communities whose lands are being poisoned.</p>
+     <p>Bitumen extraction is extremely toxic — releasing pollutants into rivers, poisoning ecosystems, and making traditional food sources unsafe to eat.</p>
+     <p>This industrial development is happening near Fort McMurray, in the heart of Treaty 8 territory, close to many Indigenous communities.</p>
+   </section>
+
+
+   <section id="impacts">
+     <h2>Environmental and Human Impacts</h2>
+     <article>
+       <h3>Air, Water, and Land</h3>
+       <p>Extracting bitumen releases greenhouse gases and poisons water systems like the Athabasca River. Wildlife and fish are dying, and smoke stacks pollute the air people breathe.</p>
+     </article>
+     <article>
+       <h3>Health and Culture</h3>
+       <p>People in Fort Chipewyan and surrounding areas have reported higher cancer rates. Hunting, trapping, and fishing — vital cultural practices — are becoming impossible.</p>
+     </article>
+   </section>
+
+
+   <section id="voices">
+     <h2>Indigenous Voices</h2>
+     <blockquote>
+       "By poisoning our air, land, and water – fossil fuel extraction threatens the very survival of Indigenous peoples and our planet is now at a tipping point."<br />
+       <cite>- Melina Laboucan-Massimo</cite>
+     </blockquote>
+     <div class="carousel">
+       <button onclick="changeVoice(-1)">&#10094;</button>
+       <div id="voiceText">
+         <p>Hear stories from Indigenous land defenders fighting back...</p>
+       </div>
+       <button onclick="changeVoice(1)">&#10095;</button>
+     </div>
+   </section>
+
+
+   <section id="acfn">
+     <h2>Focus on the Athabasca Chipewyan First Nation (ACFN)</h2>
+     <p>The ACFN have seen their traditional territory eroded by oil development. Their hunting, fishing, and trapping areas are shrinking or poisoned.</p>
+     <p>Chief Allan Adam said: “Industry comes in, makes the mess, and leaves us to live with it.”</p>
+     <p>ACFN continues to challenge the government and industry for violating their treaty rights and damaging their homeland.</p>
+   </section>
+
+
+   <section id="melina">
+     <h2>Melina Laboucan-Massimo</h2>
+     <p>Melina is from the Lubicon Cree Nation and is a powerful voice for climate justice. She has worked with Greenpeace and Indigenous Climate Action (ICA).</p>
+     <p>She advocates for a just transition and emphasizes the importance of Indigenous consent and leadership in environmental decisions.</p>
+   </section>
+
+
+   <section id="treaty">
+     <h2>Treaty Rights & Legal Issues</h2>
+     <p>The oil sands lie on Treaty 8 territory. Under Canadian law and the United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP), Indigenous peoples must give free, prior, and informed consent to resource projects.</p>
+     <p>Yet, many projects move ahead without proper consultation. Groups like ACFN continue to fight these violations in court and on the land.</p>
+   </section>
+
+
+   <section id="action">
+     <h2>What Can You Do?</h2>
+     <ul>
+       <li>Support Indigenous-led campaigns and organizations like ICA and 350.org</li>
+       <li>Talk about these issues at school and on social media</li>
+       <li>Reduce fossil fuel use in your life</li>
+       <li>Share this site and educate others</li>
+     </ul>
+     <button onclick="window.open('https://www.indigenousclimateaction.com/entries/indigenous-resistance-ab-oil-and-gas', '_blank')">
+  Join the movement / donate to support the cause
+</button>
+
+   </section>
+
+
+   <section id="custom-image">
+     <h2>Image Showcase</h2>
+     <div id="myImageArea">
+       <img src="aaAlbertaOilTarSandsFortMcKay1000px.png">
+       <img class="img2" src="6-aerial-view-of-tar-sands-in-Alberta.jpg">
+     </div>
+   </section>
+ </main>
+
+
+ <footer>
+   <p>&copy; 2025 Indigenous Awareness Project. Designed by Youth for Justice.</p>
+ </footer>
+
+
+ <script>
+   const voices = [
+     "We need clean water to live. Our people are dying from poisoned rivers.",
+     "My ancestors hunted here. Now, there is nothing left but dead trees and oil.",
+     "We are still here. Still fighting. Still defending our rights."
+   ];
+   let current = 0;
+
+
+   function changeVoice(direction) {
+     current += direction;
+     if (current < 0) current = voices.length - 1;
+     else if (current >= voices.length) current = 0;
+     document.getElementById("voiceText").innerHTML = `<p>${voices[current]}</p>`;
+   }
+
+
+   function thankUser() {
+     const btn = document.querySelector("button");
+     btn.innerText = "Thank you for your support!";
+     btn.disabled = true;
+     btn.style.backgroundColor = "#6fba82";
+   }
+ </script>
+</body>
+
+
+</html>
+
+
+
